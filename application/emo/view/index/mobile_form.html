@@ -28,7 +28,7 @@
           <span class="logo1"><img src="{$static_path}/advance/img/logo.png" alt=""></span>
           <span class="logo2 visible-xs">{$minedata.user_name}</span>
         </a>
-        <a class="login-wrapper visible-xs clearfix" href="{:url('login/logout')}"><span class="formlogout">Log out</span></a>
+        <a class="login-wrapper visible-xs clearfix" href="{:url('login/logout')}"><span class="formlogout">ออกจากระบบ</span></a>
       </div>
       <div class="m-form-step-indicator clearfix"><div><span>ข้อมูลของผู้ป่วย</span></div><div><span>ข้อมูลของผู้ขอสมัครใช้บริการ</span></div><div><span>รายละเอียด</span></div></div>
       <form class="medical-form  form-horizontal" role="form">
@@ -86,7 +86,7 @@
             </div>
           </div>
           <div class="form-group">
-            <label for="applicant-name" class="col-xs-5 col-sm-4 control-label medical-label">Name of Applicant</label>
+            <label for="applicant-name" class="col-xs-5 col-sm-4 control-label medical-label">ชื่อผู้สมัคร</label>
             <div class="col-xs-7 col-sm-8">
               <input type="text" class="form-control" id="applicant-name" name="applicant_name">
             </div>
@@ -106,7 +106,7 @@
             </div>
 
             <div class="form-group">
-              <label for="country" class="col-xs-5 col-sm-4 control-label medical-label">Province</label>
+              <label for="country" class="col-xs-5 col-sm-4 control-label medical-label">จังหวัด</label>
               <div class="col-xs-7 col-sm-8">
                 <input type="text" class="form-control" id="e_province" name="e_province">
               </div>
@@ -146,7 +146,7 @@
               </div>
             </div>
           <div class="form-group">
-            <label for="user-zip" class="col-xs-5 col-sm-4 control-label medical-label"><span class="has-width">Postal Code</span></label>
+            <label for="user-zip" class="col-xs-5 col-sm-4 control-label medical-label"><span class="has-width">รหัสไปรษณีย์</span></label>
             <div class="col-xs-7 col-sm-8">
               <input type="text" class="form-control" id="zip_code" name="zip_code">
             </div>
@@ -171,12 +171,12 @@
           </div>
           <div class="form-group">
             <label for="user-time" class="col-xs-5 col-sm-6 col-md-5 col-lg-4 control-label medical-label special-label"><div class="time-grid"><span>เวลาที่สะดวกให้ติดต่อกลับ</span></div></label>
-            <div class="col-xs-7 mobile-time-trigger"><button class="btn">Selection Time</button></div>
+            <div class="col-xs-7 mobile-time-trigger"><button class="btn">เวลาที่เลือก</button></div>
             <div class="col-sm-6 col-md-7 col-lg-8 user-time">
               <div class="user-time-wrapper">
                   <div class="time-wrapper"><div class="time-inner-wrapper"><label><input type="checkbox" name="preferred_time" value="9am-12am"><span>9am-12am</span></label></div><div class="time-inner-wrapper"><label><input type="checkbox" name="preferred_time" value="12am-3pm"><span>12am-3pm</span></label></div></div>
                   <div class="time-wrapper"><div class="time-inner-wrapper"><label><input type="checkbox" name="preferred_time" value="3pm-6pm"><span>3pm-6pm</span></label></div><div class="time-inner-wrapper"><label><input type="checkbox" name="preferred_time" value="6pm-9pm"><span>6pm-9pm</span></label></div></div>
-                  <div class="user-time-close">OK</div>
+                  <div class="user-time-close">ตกลง</div>
                 </div>
                 <div class="user-time-error"></div>
             </div>
@@ -248,7 +248,7 @@
     </div>
     <div class="contract-context">
       <div class="contract-header">
-        <span>Terms and Conditions</span><span class="contract-close-button"><i class="fa fa-times"></i></span>
+        <span>ข้อตกลงและเงื่อนไข</span><span class="contract-close-button"><i class="fa fa-times"></i></span>
       </div>
       <div class="contract-para" id="contract-para">
       <div class="para-outter-wrapper"><p>ข้าพเจ้าขอยืนยันว่าข้อมูลที่ระบุตามข้างต้นเป็นความจริงทุกประการ และข้าพเจ้ามีความเข้าใจการให้บริการความเห็นทางการแพทย์จากแพทย์ผู้เชี่ยวชาญระดับโลก และตกลงยินยอมตามเงื่อนไขที่ระบุดังต่อไปนี้</p></div>

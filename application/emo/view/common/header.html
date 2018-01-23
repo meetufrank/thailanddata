@@ -18,14 +18,14 @@
         {/if}
       </a>
         {if condition="$userid neq 0"}
-      <a class="login-wrapper visible-xs clearfix" href="{:url('Login/logout')}">Log out</a>
+      <a class="login-wrapper visible-xs clearfix" href="{:url('Login/logout')}">ออกจากระบบ</a>
        {else/}
         <a class="login-wrapper visible-xs" href="{:url('Login/index')}">เข้าสู่ระบบ</a>
        {/if}
       <ul class="menu-wrapper clearfix">
         {if condition="$userid neq 0"}
         <li class="menubar-login hidden-xs">
-          <a href="{:url('Login/logout')}">{$minedata.user_name}丨Log out</a>
+          <a href="{:url('Login/logout')}">{$minedata.user_name}丨ออกจากระบบ</a>
         </li>
         {else/}
         <li class="menubar-login hidden-xs">

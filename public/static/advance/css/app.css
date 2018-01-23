@@ -103,9 +103,9 @@ body {
 
 
 
-.logo-wrapper span img {
+/*.logo-wrapper span img {
 	width: 100%
-}
+}*/
 
 @media (min-width:768px) {
 	.logo-wrapper .logo1 {
