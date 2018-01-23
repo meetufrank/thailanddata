@@ -34,7 +34,7 @@ class Index extends Controller
     public function _initialize()
     {
      
-        $this->redirect(Request::instance()->url().'/dcp');exit;
+        $this->redirect(Request::instance()->url().'/emo');exit;
         parent::_initialize();
         
         //记录当前url
