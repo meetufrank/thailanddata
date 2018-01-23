@@ -1,12 +1,12 @@
 <div class="bottom-nav-wrapper clearfix">
       <ul class="bottom-nav">
-        <li><a href="http://advance-medical.net/about">About Advance Medical</a></li>
-        <li><a href="{:url('/Allianz/EMO/services/1')}#Gemomao">Global Expert Medical Opinion</a></li>
+        <li><a href="http://advance-medical.net/about">เกี่ยวกับ บริษัทแอดวานส์ เมดิคอล</a></li>
+        <li><a href="{:url('/Allianz/EMO/services/1')}#Gemomao">บริการความเห็นทางการแพทย์จากแพทย์ผู้เชี่ยวชาญระดับโลก</a></li>
 <!--         <li><a href="" class="special-text">xxxxxx</a></li> -->
       </ul>
     </div>
     <div class="medical-footer">
-      <div class="medical-footer-text">These independent advisory services do not constitute any form of medical diagnosis, treatment or prescription.</div>
+      <div class="medical-footer-text">บริการให้คำปรึกษาและความเห็นทางการแพทย์เหล่านี้ ไม่ถือว่าเป็นการวินิจฉัยทางการแพทย์ การรักษาหรือการสั่งยาใดๆ </div>
       <div class="medical-footer-text2">Copyright of Advance Medical 2017</div>
     </div>
   </div>
@@ -34,7 +34,7 @@
   <div class="form-outter-wrapper">
     <div class="form-diagnose">
       <div class="image-wrapper"><img src="{$static_path}/advance/img/diagnose.png" alt=""></div>
-      <div class="form-diagnose-text">Get Started</div>
+      <div class="form-diagnose-text">เริ่มกันเลย</div>
     </div>
     <div class="form-inner-wrapper">
       <div class="form-home-header">
@@ -61,35 +61,35 @@
         <div class="medical-form-header">
           <div class="close-button form-close-button"><span>&#10006;</span></div>
           <div class="form-step-indicator clearfix"><!--
-              --><div><span>Patient information</span></div><!--
-              --><div><span>Applicant information</span></div><!--
-              --><div><span>Description</span></div><!--
+              --><div><span>ข้อมูลของผู้ป่วย</span></div><!--
+              --><div><span>ข้อมูลของผู้ขอสมัครใช้บริการ</span></div><!--
+              --><div><span>รายละเอียด</span></div><!--
           --></div>
         </div>
           <form autocomplete="off" class="medical-form form-horizontal" role="form" method="post" >
           <input type="hidden" id="form-type" name="case_type" value="">
           <div class="form-section">
             <div class="form-group">
-              <label for="patient-name" class="col-xs-4 col-sm-3 control-label medical-label">Patient Name</label>
+              <label for="patient-name" class="col-xs-4 col-sm-3 control-label medical-label">ชื่อผู้ป่วย</label>
               <div class="col-xs-8 col-sm-9">
                 <input type="text" class="form-control" id="patient-name" name="username">
               </div>
             </div>
             <div class="form-group date-select">
-              <label for="birth-date" class="col-xs-4 col-sm-3 control-label medical-label">Date of Birth</label>
+              <label for="birth-date" class="col-xs-4 col-sm-3 control-label medical-label">วัน/เดือน/ปี เกิด</label>
               <div class="col-xs-8 col-sm-9">
                 <input type="text" class="form-control" id="patient-birth" name="birthday" data-field="date" readonly="">
                 <div class="box-container"><div id="dtBox"></div></div>
               </div>
             </div>
             <div class="form-group">
-              <label for="patient-gender" class="col-xs-4 col-sm-3 control-label medical-label">Gender</label>
+              <label for="patient-gender" class="col-xs-4 col-sm-3 control-label medical-label">เพศ</label>
               <div class="col-xs-8 col-sm-9">
                 <div class="col-xs-6 col-sm-4 gender-single">
-                  <label for="patient-gender1"><input type="radio" name="sex" id="patient-gender1" value="1"><span>Male</span></label>
+                  <label for="patient-gender1"><input type="radio" name="sex" id="patient-gender1" value="1"><span>ชาย</span></label>
                 </div>
                 <div class="col-xs-6 col-sm-4 gender-single">
-                  <label for="patient-gender2"><input type="radio" name="sex" id="patient-gender2" value="0"><span>Female</span></label>
+                  <label for="patient-gender2"><input type="radio" name="sex" id="patient-gender2" value="0"><span>หญิง</span></label>
                 </div>
                 <div class="col-xs-12 gender-error"></div>
               </div>
@@ -97,25 +97,25 @@
           </div>
           <div class="form-section">
            <div class="form-group">
-              <label for="" class="col-xs-6 col-sm-4 control-label medical-label">Are you the patient</label>
+              <label for="" class="col-xs-6 col-sm-4 control-label medical-label">ท่านเป็นผู้ป่วยใช่หรือไม่?</label>
               <div class="col-xs-6 col-sm-8 relation-between">
                 <div class="col-xs-6 col-sm-6 relation-single">
-                  <label for="is-patient-self1"><input type="radio" name="isme" id="is-patient-self1" value="1" checked><span>Yes</span></label>
+                  <label for="is-patient-self1"><input type="radio" name="isme" id="is-patient-self1" value="1" checked><span>ใช่</span></label>
                 </div>
                 <div class="col-xs-6 col-sm-6 relation-single">
-                  <label for="is-patient-self2"><input type="radio" name="isme" id="is-patient-self2" value="0"><span>No</span></label>
+                  <label for="is-patient-self2"><input type="radio" name="isme" id="is-patient-self2" value="0"><span>ไม่ใช่</span></label>
                 </div>
               </div>
             </div>
             <div class="form-group">
-              <label for="other-relation" class="col-xs-5 col-sm-4 control-label medical-label">Your relation to the patient</label>
+              <label for="other-relation" class="col-xs-5 col-sm-4 control-label medical-label">ความสัมพันธ์กับผู้ป่วย</label>
               <div class="col-xs-7 col-sm-8">
                 <select id="other-relation" disabled="" name="relationship" class="not-mandatory">
                   <option value=""></option>
-                  <option value="parents">parents</option>
-                <option value="child">child</option>
-                <option value="spouse">spouse</option>
-                <option value="other">other</option>
+                  <option value="parents">ผู้ปกครอง</option>
+                <option value="child">ลูก</option>
+                <option value="spouse">คู่สมรส</option>
+                <option value="other">อื่นๆ </option>
                 </select>
               </div>
             </div>
@@ -127,7 +127,7 @@
             </div>
             
             <div class="form-group">
-              <label for="country" class="col-xs-5 col-sm-4 control-label medical-label">Country</label>
+              <label for="country" class="col-xs-5 col-sm-4 control-label medical-label">ประเทศ</label>
               <div class="col-xs-7 col-sm-8">
                 <select id="country" name="country" >
                   {volist name="country_list" id="cl"}
@@ -170,7 +170,7 @@
                   </select>
                 </div>
                 <div class="col-xs-12 col-sm-12 address-details">
-                  <input type="text" class="form-control" id="address-details" name="address" placeholder="Detailed address">
+                  <input type="text" class="form-control" id="address-details" name="address" placeholder="รายละเอียดที่อยู่">
                 </div>
               </div>
             </div>
@@ -181,26 +181,25 @@
               </div>
             </div>
             <div class="form-group">
-              <label for="user-first-phone" class="col-xs-5 col-sm-4 control-label medical-label"><span class="has-width">Preferred Telephone Number</span></label>
+              <label for="user-first-phone" class="col-xs-5 col-sm-4 control-label medical-label"><span class="has-width">หมายเลขโทรศัพท์ที่ติดต่อได้</span></label>
               <div class="col-xs-7 col-sm-8">
                 <input type="text" class="form-control" id="user-first-phone" name="preferred_phone">
               </div>
             </div>
             <div class="form-group">
-              <label for="user-second-phone" class="col-xs-5 col-sm-4 control-label medical-label"><span class="has-width">Alternative Telephone Number</span></label>
+              <label for="user-second-phone" class="col-xs-5 col-sm-4 control-label medical-label"><span class="has-width">หมายเลขโทรศัพท์อื่นๆ</span></label>
               <div class="col-xs-7 col-sm-8">
                 <input type="text" class="form-control" id="user-second-phone" name="standby_phone">
               </div>
             </div>
             <div class="form-group">
-              <label for="user-email" class="col-xs-5 col-sm-4 control-label medical-label"><span class="has-width">Email</span></label>
+              <label for="user-email" class="col-xs-5 col-sm-4 control-label medical-label"><span class="has-width">อีเมล</span></label>
               <div class="col-xs-7 col-sm-8">
                 <input type="text" class="form-control" id="user-email" name="email">
               </div>
             </div>
             <div class="form-group">
-              <label for="user-time" class="col-xs-5 col-sm-4 col-md-4 col-lg-4 control-label medical-label special-label">Convenient Time to be Contacted
-</label>
+              <label for="user-time" class="col-xs-5 col-sm-4 col-md-4 col-lg-4 control-label medical-label special-label">เวลาที่สะดวกให้ติดต่อกลับ</label>
               <div class="col-sm-8 col-md-8 col-lg-8 user-time">
                 <div class="user-time-wrapper">
                   <div class="time-wrapper"><div class="time-inner-wrapper"><label><input type="checkbox" name="preferred_time" value="9am-12am"><span>9am-12am</span></label></div><div class="time-inner-wrapper"><label><input type="checkbox" name="preferred_time" value="12am-3pm"><span>12am-3pm</span></label></div></div>
@@ -212,7 +211,7 @@
           </div>
           <div class="form-section">
             <div class="form-group">
-              <label class="col-xs-12 col-sm-12 control-label medical-label change-label">Please briefly describe your diagnosis and questions</label>
+              <div class="col-xs-12 col-sm-12 medical-label">อัปโหลดประวัติทางการแพทย์ของฉัน</div>
             </div>
             <div class="form-group">
               <div class="col-xs-12 col-sm-12">
@@ -220,29 +219,29 @@
               </div>
             </div>
             <a href="javascript:;" class="a-upload">
-                <input type="file" name="upload_file" id="upload_file">Upload my medical history
+                <input type="file" name="upload_file" id="upload_file">อัปโหลดประวัติทางการแพทย์ของฉัน
             </a><span id="upload_result"></span>
-            <p>File only supports a single JPG, PDF, JPEG, PNG, DOC, ZIP format. For multiple files please compress and ZIP files. Maximum upload size 10MB.</p>
+            <p>ไฟล์ที่รองรับคือ JPG PDF JPEG PNG DOC และ ZIP โดยสามารถอัปโหลดได้ครั้งละ 1 ไฟล์เท่านั้น หากคุณมีไฟล์ที่ต้องการส่งหลายไฟล์ กรุณาบีบอัดให้เป็นไฟล์ ZIP โดยขนาดอัปโหลดสูงสุด คือ 10 เมกะไบต์ </p>
             <div class="form-group optional-checkbox">
               <div class="col-sm-12">
                 <input type="checkbox" id="doctor-checkbox" name="doctor_checkbox">
-                <label for="doctor-checkbox">My current treatment doctor's information (optional)</label>
+                <label for="doctor-checkbox">ข้อมูลของแพทย์คนปัจจุบัน (ตัวเลือก)</label>
               </div>
             </div>
             <div class="form-group doctor-group">
-              <label for="doctor-name" class="col-xs-5 col-sm-4 control-label medical-label">Doctor's name</label>
+              <label for="doctor-name" class="col-xs-5 col-sm-4 control-label medical-label">ชื่อแพทย์</label>
               <div class="col-xs-7 col-sm-8">
                 <input type="text" class="form-control doctor-name doctor"  name="treatment_doctor">
               </div>
             </div>
             <div class="form-group doctor-group">
-              <label for="doctor-hospital" class="col-xs-5 col-sm-4 control-label medical-label">Hospital</label>
+              <label for="doctor-hospital" class="col-xs-5 col-sm-4 control-label medical-label">โรงพยาบาล</label>
               <div class="col-xs-7 col-sm-8">
                 <input type="text" class="form-control doctor-hospital doctor"  name="treatment_hospital">
               </div>
             </div>
             <div class="form-group doctor-group">
-              <label for="doctor-major" class="col-xs-5 col-sm-4 control-label medical-label">Specialist</label>
+              <label for="doctor-major" class="col-xs-5 col-sm-4 control-label medical-label">ความเชี่ยวชาญ</label>
               <div class="col-xs-7 col-sm-8">
                 <input type="text" class="form-control doctor-major doctor"  name="specialty">
               </div>
@@ -252,15 +251,15 @@
             <div class="form-group">
               <div class="col-sm-12">
                 <input type="checkbox" id="contract-checkbox" name="contract-checkbox" checked="">
-                <label for="contract-checkbox"> I have read and accepted the</label><span class="contract-click">&nbsp;terms and conditions</span>
+                <label for="contract-checkbox">ข้าพเจ้าได้อ่านและยอมรับข</label><span class="contract-click">้อตกลงและเงื่อนไขแล้ว</span>
               </div>
             </div>
           </div>
           <div class="contract-check-error"></div>
           <div class="form-navigation clearfix">
-            <button type="button" class="back-to-home btn btn-navigate pull-left">Back</button>
-            <button type="button" class="previous btn btn-navigate pull-left">Prev</button>
-            <button type="button" class="next btn btn-navigate pull-right">Next</button>
+            <button type="button" class="back-to-home btn btn-navigate pull-left">ย้อนกลับ</button>
+            <button type="button" class="previous btn btn-navigate pull-left">ย้อนกลับ</button>
+            <button type="button" class="next btn btn-navigate pull-right">ไปต่อ</button>
             <input type="submit" value="Submit" class="btn btn-navigate pull-right submit-btn">
           </div>
         </form>
@@ -272,18 +271,18 @@
       <span>Terms and Conditions</span><span class="contract-close-button"><i class="fa fa-times"></i></span>
     </div>
     <div class="contract-para" id="contract-para">
-      <div class="para-outter-wrapper"><p>The information provided above is true. I understand the services of the Global Expert Medical Opinion program and agree to terms below:</p></div>
-      <div class="para-outter-wrapper"><span>1、</span><p>All the personal and medical data, referred to as "CONFIDENTIAL INFORMATION" contained in this enrollment agreement, or provided to ADVANCE MEDICAL/ALLIANZ MALAYSIA in any manner, in relation to your case, will be used with the only purpose of delivering the service required and may be shared with relevant experts and medical institutions when needed.
+      <div class="para-outter-wrapper"><p>ข้าพเจ้าขอยืนยันว่าข้อมูลที่ระบุตามข้างต้นเป็นความจริงทุกประการ และข้าพเจ้ามีความเข้าใจการให้บริการความเห็นทางการแพทย์จากแพทย์ผู้เชี่ยวชาญระดับโลก และตกลงยินยอมตามเงื่อนไขที่ระบุดังต่อไปนี้</p></div>
+      <div class="para-outter-wrapper"><span>1、</span><p>ข้อมูลส่วนบุคคลและข้อมูลทางการแพทย์ซึ่งถูกอ้างถึงในฐานะที่เป็น “ข้อมูลความลับ” ที่ถูกระบุอยู่ในแบบฟอร์มนี้หรือถูกจัดเตรียมให้กับบริษัทแอดวานส์ เมดิคอล และ/หรือ บมจ.อลิอันซ์ อยุธยา ประกันชีวิต ไม่ว่าในลักษณะใดก็ตาม จะถูกใช้เพื่อการขอรับบริการความเห็นจากแพทย์ผู้เชี่ยวชาญเท่านั้น ทั้งนี้ข้อมูลดังกล่าวอาจถูกเปิดเผยให้กับผู้เชี่ยวชาญที่เกี่ยวข้อง รวมถึงสถาบันทางการแพทย์ต่างๆ ในกรณีที่มีเหตุจำเป็น
       </p></div>
-      <div class="para-outter-wrapper"><span>2、</span><p>Your data will be anonymized, to protect your privacy. Your data will be used in a proper and secured manner.
+      <div class="para-outter-wrapper"><span>2、</span><p>ข้อมูลของท่านจะถูกปกปิดเพื่อปกป้องความเป็นส่วนตัวของท่าน ทั้งนี้ข้อมูลของท่านจะถูกนำไปใช้ในทางที่เหมาะสมและปลอดภัย
       </p></div>
-      <div class="para-outter-wrapper"><span>3、</span><p>You hereby accept that ALLIANZ Maylasia or its authorized partner, ADVANCE MEDICAL and its employees, will contact you in order to obtain necessary information to provide you with the service requested.
+      <div class="para-outter-wrapper"><span>3、</span><p>ข้าพเจ้าตกลงและยิมยอมให้ บมจ.อลิอันซ์ อยุธยา ประกันชีวิต และบริษัทคู่ค้าที่ได้รับอนุญาต คือบริษัทแอดวานส์ เมดิคอล และพนักงานของบริษัทดังกล่าว สามารถติดต่อข้าพเจ้าเพื่อขอข้อมูลที่จำเป็นสำหรับการเข้ารับบริการนี้ โดยข้อมูลทั้งหมดจะถูกเก็บไว้เพื่อใช้ในกรณีที่เกี่ยวข้องกับบริการนี้เท่านั้น
       </p></div>
-      <div class="para-outter-wrapper"><span>4、</span><p>You hereby agree to provide all relevant personal and medical data and you grant ADVANCE MEDICAL permission to use and disclose this information as described to fulfill the service requested.
+      <div class="para-outter-wrapper"><span>4、</span><p>ข้าพเจ้าตกลงและยินยอมจัดเตรียมข้อมูลส่วนบุคคลและข้อมูลทางการแพทย์เพื่อใช้ในการเข้ารับบริการความเห็นจากแพทย์ผู้เชี่ยวชาญ และให้สิทธิ์แก่บริษัทแอดวานส์ เมดิคอล และ/หรือ บมจ.อลิอันซ์ อยุธยา ประกันชีวิต ในการใช้และเปิดเผยข้อมูลซึ่งเป็นไปตามที่ระบุอยู่ในประกาศเกี่ยวกับนโยบายความเป็นส่วนตัวของเรา
       </p></div>
-      <div class="para-outter-wrapper"><span>5、</span><p>The Personal Health Advisor rendering the advisory services indicated above will not examine you in person or have any information beyond what you provide. The services delivered to you is not a medical diagnosis, nor does it involve any form of treatment. The information contained in the Expert Medical Opinion Report provides alternative perspectives and shall not be used as a substitute for your physician’s recommendations.
+      <div class="para-outter-wrapper"><span>5、</span><p>ข้าพเจ้าเข้าใจดีว่า แพทย์ผู้ให้ความเห็นในรายงานความเห็นของผู้เชี่ยวชาญจะไม่ได้ผลประโยชน์ใดๆ เป็นการส่วนตัว รวมทั้งไม่ได้ขอให้มีการตรวจเพิ่มเติม หรือมีข้อมูลใดๆ ที่นอกเหนือจากข้อมูลที่ข้าพเจ้าได้จัดเตรียมให้ นอกจากนี้  การให้บริการที่จัดให้กับข้าพเจ้านี้ไม่ถือเป็นการวินิจฉัยทางการแพทย์ และไม่ถือว่าเป็นการรักษาในรูปแบบใดก็ตาม ทั้งนี้ ข้อมูลที่ระบุอยู่ในรายงานการให้บริการความเห็นจากแพทย์ผู้เชี่ยวชาญนี้เป็นเพียงอีกมุมมองหนึ่งของทางเลือก ซึ่งไม่สามารถใช้ทดแทนคำแนะนำของแพทย์ผู้ทำการรักษาของข้าพเจ้าได้
       </p></div>
-      <div class="para-outter-wrapper"><span>6、</span><p>After receiving the report, your decisions and judgment regarding further medical decisions are based on your own judgement. ALLIANZ MALAYSIA/ADVANCE MEDICAL services are unbiased and hence not responsible for the consequences of any personal decisions.
+      <div class="para-outter-wrapper"><span>6、</span><p>หลังจากได้รับรายงานความเห็นจากแพทย์ผู้เชี่ยวชาญ ข้าพเจ้าทำการตัดสินใจและเลือกการให้บริการด้วยตัวของข้าพเจ้าเอง  ทั้งนี้ บมจ.อลิอันซ์ อยุธยา ประกันชีวิต และบริษัทแอดวานส์ เมดิคอล ไม่ได้ให้คำแนะนำอย่างมีอคติ ดังนั้นจึงไม่มีส่วนร่วมในการรับผิดชอบใดๆในการตัดสินใจของข้าพเจ้า
       </p></div>
     </div>
   </div>

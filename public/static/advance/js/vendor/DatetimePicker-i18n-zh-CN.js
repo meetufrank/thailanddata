@@ -57,9 +57,9 @@
 
         language: "zh-EN",
         labels: {
-            'year': 'Year',
-            'month': 'Month',
-            'day': 'Day',
+            'year': 'ปี',
+            'month': 'เดือน',
+            'day': 'วัน',
             'hour': 'Hour',
             'minutes': 'Minutes',
             'seconds': 'Seconds',
@@ -78,8 +78,8 @@
         titleContentTime: "Set time",
         titleContentDateTime: "Set date and time",
 
-        setButtonContent: "Set",
-        clearButtonContent: "Clear",
+        setButtonContent: "ตั้งค่า",
+        clearButtonContent: "ลบค่า",
         formatHumanDate: function (oDate, sMode, sFormat) {
             if (sMode === "date")
                 return oDate.yyyy + "-" +  oDate.month +"-" + oDate.dd + "";
