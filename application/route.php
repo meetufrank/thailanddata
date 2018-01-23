@@ -24,9 +24,9 @@ return [
 //    'service'=>'laychatphone/Login/index',
     
     //advance
-   'Allianz/DCP/services/:id'=>'dcp/Index/service_details',
-    'Allianz/DCP/mobile_form/:id'=>'dcp/Index/mobile_form',
-    'Allianz/DCP'=>'dcp/Index/service_details',
+//   'Allianz/DCP/services/:id'=>'dcp/Index/service_details',
+//    'Allianz/DCP/mobile_form/:id'=>'dcp/Index/mobile_form',
+//    'Allianz/DCP'=>'dcp/Index/service_details',
     
     'Allianz/EMO/services/:id'=>'emo/Index/service_details',
     'Allianz/EMO/mobile_form/:id'=>'emo/Index/mobile_form',

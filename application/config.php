@@ -14,6 +14,7 @@ return [
         'extra',
         'install',
         'laychatphone',
+        'dcp'
     ],
     
     'default_module' => 'advance',//默认模块	
