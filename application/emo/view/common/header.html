@@ -20,7 +20,7 @@
         {if condition="$userid neq 0"}
       <a class="login-wrapper visible-xs clearfix" href="{:url('Login/logout')}">Log out</a>
        {else/}
-        <a class="login-wrapper visible-xs" href="{:url('Login/index')}">Log In</a>
+        <a class="login-wrapper visible-xs" href="{:url('Login/index')}">เข้าสู่ระบบ</a>
        {/if}
       <ul class="menu-wrapper clearfix">
         {if condition="$userid neq 0"}
@@ -29,7 +29,7 @@
         </li>
         {else/}
         <li class="menubar-login hidden-xs">
-          <a href="{:url('Login/index')}"><i class="fa fa-unlock-alt" aria-hidden="true"></i>&nbsp;Log In</a>
+          <a href="{:url('Login/index')}"><i class="fa fa-unlock-alt" aria-hidden="true"></i>&nbsp;เข้าสู่ระบบ</a>
         </li>
         {/if}
          {volist name="service_list" id="sl"}
@@ -61,7 +61,7 @@
       <div class="flex-mask">
         <div class="diagnose logvilad" >
           <div class="image-wrapper"><img src="{$static_path}/advance/img/diagnose.png" alt=""></div>
-          <div class="diagnose-text">Get Started</div>
+          <div class="diagnose-text">เริ่มกันเลย</div>
         </div>
         <div class="flex-phone-wrapper">
           <span>1&nbsp;300&nbsp;88&nbsp;1028</span>
@@ -75,5 +75,5 @@
       </div>
     </div>
     <div class="mobile-diagnose logvilad">
-      <div class="diagnose-text">Get Started</div>
+      <div class="diagnose-text">เริ่มกันเลย</div>
     </div>
