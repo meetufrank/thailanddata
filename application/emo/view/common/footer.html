@@ -1,7 +1,7 @@
 <div class="bottom-nav-wrapper clearfix">
       <ul class="bottom-nav">
         <li><a href="http://advance-medical.net/about">เกี่ยวกับ บริษัทแอดวานส์ เมดิคอล</a></li>
-        <li><a href="{:url('/Allianz/EMO/services/1')}#Gemomao">บริการความเห็นทางการแพทย์จากแพทย์ผู้เชี่ยวชาญระดับโลก</a></li>
+        <li><a href="{:url('/Allianz/EMO/Thai/services/1')}#Gemomao">บริการความเห็นทางการแพทย์จากแพทย์ผู้เชี่ยวชาญระดับโลก</a></li>
 <!--         <li><a href="" class="special-text">xxxxxx</a></li> -->
       </ul>
     </div>
@@ -23,7 +23,7 @@
         
         {volist name="service_list" id="sl"}
         {in name="$sl.id" value="1"}
-                <a type="button" class="btn m-btn-medical {$sl.mobile_style}" href="{:url('/Allianz/EMO/mobile_form/'.$sl.id)}{$sl.m_id_name}">{$sl.typetname}</a>
+                <a type="button" class="btn m-btn-medical {$sl.mobile_style}" href="{:url('/Allianz/EMO/Thai/mobile_form/'.$sl.id)}{$sl.m_id_name}">{$sl.typetname}</a>
          {/in}
                 {/volist}
 
