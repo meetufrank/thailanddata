@@ -37,6 +37,7 @@ function animateShowForm() {
         duration: 400,
         easing: "easeInOutQuart"
     })
+    
 }
 $(function() {
     $("body").on("click", "div.diagnose", animateShowForm),
