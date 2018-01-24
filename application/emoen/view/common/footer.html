@@ -1,7 +1,7 @@
 <div class="bottom-nav-wrapper clearfix">
       <ul class="bottom-nav">
         <li><a href="http://advance-medical.net/about">About Advance Medical</a></li>
-        <li><a href="{:url('/Allianz/EMO/En/services/1')}#Gemomao">Global Expert Medical Opinion</a></li>
+        <li><a href="{:url('/Allianz/EMO/En/services/1')}#Gemomao">Expert Second Medical Opinion</a></li>
 <!--         <li><a href="" class="special-text">xxxxxx</a></li> -->
       </ul>
     </div>
@@ -23,7 +23,7 @@
         
         {volist name="service_list" id="sl"}
         {in name="$sl.id" value="1"}
-                <a type="button" class="btn m-btn-medical {$sl.mobile_style}" href="{:url('/Allianz/EMO/En/mobile_form/'.$sl.id)}{$sl.m_id_name}">{$sl.typeename}</a>
+                <a type="button" class="btn m-btn-medical {$sl.mobile_style}" href="{:url('/Allianz/EMO/En/mobile_form/'.$sl.id)}{$sl.m_id_name}">Expert Second Medical Opinion</a>
          {/in}
                 {/volist}
 
@@ -44,7 +44,7 @@
       <div class="form-choice-wrapper">
           {volist name="service_list" id="sl"}
           {in name="$sl.id" value="1"}
-           <button type="button" class="btn btn-medical {$sl.pc_style}">{$sl.typeename}</button>
+           <button type="button" class="btn btn-medical {$sl.pc_style}">Expert Second Medical Opinion</button>
           {/in}
            {/volist}
 
