@@ -81,7 +81,7 @@ label.error {
 
 body {
 	font: 100% "Arial","Helvetica Neue",Helvetica,Arial,sans-serif;
-	// font: 100% "Times New Roman",Helvetica,Arial,sans-serif;
+	/*font: 100% "Times New Roman",Helvetica,Arial,sans-serif;*/
 	color: #676767;
 }
 
@@ -103,9 +103,9 @@ body {
 
 
 
-/*.logo-wrapper span img {
+.logo-wrapper span img {
 	width: 100%
-}*/
+}
 
 @media (min-width:768px) {
 	.logo-wrapper .logo1 {
@@ -591,8 +591,11 @@ body {
 		font-weight: bold;
 		height: 32px;
 	}
-	.menubar-login a{
+	.menubar-login .mlogin{
 		margin-right: 19px;
+	}
+	.menubar-login a{
+		
 	}
 	.menubar-login a:hover{
 		color: #0085c4;

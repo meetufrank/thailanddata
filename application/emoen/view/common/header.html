@@ -18,18 +18,22 @@
         {/if}
       </a>
         {if condition="$userid neq 0"}
-      <a class="login-wrapper visible-xs clearfix" href="{:url('Login/logout')}">Log out</a>
+          <a class="login-wrapper visible-xs col-xs-6" href="{:url('Allianz/EMO/Thai')}">ไทย(Thai)</a>
+          <a class="login-wrapper visible-xs col-xs-6" href="{:url('Login/logout')}">Log out</a>
+          <div style="clear:both;" class="visible-xs"></div>
        {else/}
-        <a class="login-wrapper visible-xs" href="{:url('Login/index')}">Log In</a>
+          <a class="login-wrapper visible-xs col-xs-6" href="{:url('Allianz/EMO/Thai')}">ไทย(Thai)</a>
+          <a class="login-wrapper visible-xs col-xs-6" href="{:url('Login/index')}">Log In</a>
+          <div style="clear:both;" class="visible-xs"></div>
        {/if}
       <ul class="menu-wrapper clearfix">
         {if condition="$userid neq 0"}
         <li class="menubar-login hidden-xs">
-          <a href="{:url('Login/logout')}">{$minedata.user_name}丨Log out</a>
+          <a href="{:url('Allianz/EMO/Thai')}">ไทย(Thai)</a>丨<a href="{:url('Login/logout')}">{$minedata.user_name}丨Log out</a>
         </li>
         {else/}
         <li class="menubar-login hidden-xs">
-          <a href="{:url('Login/index')}"><i class="fa fa-unlock-alt" aria-hidden="true"></i>&nbsp;Log In</a>
+          <a href="{:url('Allianz/EMO/Thai')}">ไทย(Thai)</a>丨<a href="{:url('Login/index')}" class="mlogin"><i class="fa fa-unlock-alt" aria-hidden="true"></i>&nbsp;Log In</a>
         </li>
         {/if}
          {volist name="service_list" id="sl"}
@@ -64,7 +68,7 @@
           <div class="diagnose-text">Get Started</div>
         </div>
         <div class="flex-phone-wrapper">
-          <span>1&nbsp;300&nbsp;88&nbsp;1028</span>
+          <span>1&nbsp;3&nbsp;7&nbsp;3</span>
         </div>
       </div>
     </div>
