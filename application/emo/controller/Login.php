@@ -79,7 +79,7 @@ class Login extends Controller
                 }
                 
             }else{
-                $url=url('/Allianz');
+                $url=url('/Allianz/EMO/Thai');
             }
             return json(['code' => 1, 'data' => $url, 'msg' => 'Log in successful']);
         }
@@ -119,7 +119,7 @@ class Login extends Controller
         if(!empty(cookie('amback'))){
                 $url= cookie('amback');
             }else{
-                $url=url('/Allianz');
+                $url=url('/Allianz/EMO/Thai');
             }
 
             $this->success('Quit successfully',$url,'',2);
