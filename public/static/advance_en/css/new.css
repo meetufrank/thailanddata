@@ -23,7 +23,6 @@
     }
     .expert-titles-two{
         font-size:2.8em;
-        margin-bottom:40px;
         font-weight: bold;
     }
 }@media (min-width:993px)
@@ -99,8 +98,8 @@
     display: block;
 }
 .pcmail{
-    font-size:1.8em !important;
-    word-break: break-word;
+    word-break: break-all;
+    margin-top: 6px;
 }
 .diagnose-step-title{
     z-index: 99;
