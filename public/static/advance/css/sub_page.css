@@ -509,7 +509,7 @@
 	}
 
 	.expert-feature-wrapper .feature-title {
-		font-size: 1.8em;
+		font-size: 1.5em;
 		font-weight: 700;
 		margin: 20px 0 10px
 	}
@@ -576,13 +576,13 @@
 	.expert-feature-wrapper-new span {
 		display: block;
 		text-align: center;
-		// color: #017f4f;
+		/*color: #017f4f;*/
 		font-size: 1.8em;
 		font-weight: 400
 	}
 
 	.expert-feature-wrapper .feature-title {
-		font-size:1.8em;
+		font-size:1.5em;
 		font-weight: 700;
 		margin: 20px 0 10px
 	}
