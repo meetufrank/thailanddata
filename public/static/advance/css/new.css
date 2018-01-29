@@ -18,6 +18,14 @@
 
         margin-left: 40px;
     }
+    .diagnose-step-title{
+        font-size:2em;
+    }
+    .expert-titles-two{
+        font-size:2.8em;
+        margin-bottom:40px;
+        font-weight: bold;
+    }
 }@media (min-width:993px)
 {
     .login-wrapper
@@ -45,6 +53,12 @@
     padding: 5px 0;
     color:#0085c4;
     font-weight: bold;
+    }
+    .diagnose-step-title{ 
+        font-size:1.3em; 
+    }
+    .expert-titles-two{
+        font-size:1.8em;
     }
 }
 /*20170731*/
@@ -87,4 +101,14 @@
 .pcmail{
     font-size:1.8em !important;
     word-break: break-word;
+}
+.diagnose-step-title{
+    z-index: 99;
+    position: relative;
+    color:#017f4f;
+    margin-left: 20px;
+    font-weight: bolder;
+}
+.expert-titles-two{
+    color: #017f4f;
 }

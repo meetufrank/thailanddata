@@ -23,7 +23,7 @@
           <div style="clear:both;" class="visible-xs"></div>
        {else/}
           <a class="login-wrapper visible-xs col-xs-6" href="{:url('Allianz/EMO/En')}">ไอังกฤษ(English)</a>
-          <a class="login-wrapper visible-xs col-xs-6" href="{:url('Login/index')}">เข้าสู่ระบบ</a>
+          <!-- <a class="login-wrapper visible-xs col-xs-6" href="{:url('Login/index')}">เข้าสู่ระบบ</a> -->
           <div style="clear:both;" class="visible-xs"></div>
        {/if}
       <ul class="menu-wrapper clearfix">
@@ -33,7 +33,7 @@
         </li>
         {else/}
         <li class="menubar-login hidden-xs">
-          <a href="{:url('Allianz/EMO/En')}">ไอังกฤษ(English)</a>丨<a href="{:url('Login/index')}" class="mlogin"><i class="fa fa-unlock-alt" aria-hidden="true"></i>&nbsp;เข้าสู่ระบบ</a>
+          <a href="{:url('Allianz/EMO/En')}">ไอังกฤษ(English)</a><!-- 丨<a href="{:url('Login/index')}" class="mlogin"><i class="fa fa-unlock-alt" aria-hidden="true"></i>&nbsp;เข้าสู่ระบบ</a> -->
         </li>
         {/if}
          {volist name="service_list" id="sl"}
@@ -62,12 +62,12 @@
           </ul>
         </div>
       </div>
-      <div class="flex-mask">
-        <div class="diagnose logvilad" >
-          <div class="image-wrapper"><img src="{$static_path}/advance/img/diagnose.png" alt=""></div>
-          <div class="diagnose-text">เริ่มกันเลย</div>
+      <div class="flex-mask" onclick="zuzhi();">
+        <div class="diagnose logvilad" onclick="zuzhi();">
+          <div class="image-wrapper" onclick="zuzhi();"><img src="{$static_path}/advance/img/diagnose.png" onclick="zuzhi();"></div>
+          <div class="diagnose-text" onclick="zuzhi();">เริ่มกันเลย</div>
         </div>
-        <div class="flex-phone-wrapper">
+        <div class="flex-phone-wrapper" onclick="zuzhi();">
           <span>1&nbsp;3&nbsp;7&nbsp;3</span>
           <span class="pcmail">customercare@azay.co.th</span>
         </div>
@@ -79,6 +79,6 @@
         <img src="{$static_path}/advance/img/444.jpg" alt="">
       </div>
     </div>
-    <div class="mobile-diagnose logvilad">
-      <div class="diagnose-text">เริ่มกันเลย</div>
+    <div class="mobile-diagnose logvilad" onclick="zuzhi();">
+      <div class="diagnose-text" onclick="zuzhi();">เริ่มกันเลย</div>
     </div>
