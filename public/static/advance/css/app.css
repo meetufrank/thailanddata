@@ -622,16 +622,16 @@ body {
 	}
 
 	.flex-container-wrapper .diagnose-text {
-		/*margin-left: 110px;*/
-		height: 100px;
-		line-height: 100px;
-		color: #fff;
-		/*font-size: 2.9em;*/
-		font-size: 2.5em;
-		/*margin-right: 10px;*/
-		text-align: center;
-		letter-spacing: 1px;
-		word-break: break-all;
+    	height: 100px;
+    	line-height: 30px;
+    	color: #fff;
+	    /* font-size: 2.9em; */
+	    font-size: 2em;
+	    /* margin-right: 10px; */
+	    text-align: center;
+	    letter-spacing: 1px;
+	    word-break: break-all;
+	    padding-top: 20px;
 	}
 }
 
@@ -655,13 +655,8 @@ body {
 		margin-left: 8px
 	}
 
-	.flex-container-wrapper .diagnose-text {
-		// margin-left: 110px;
-		height: 100px;
-		// line-height: 100px;
+	.flex-container-wrapper .diagnose-text {		
 		color: #fff;
-		// font-size: 3em;
-		margin-right: 20px;
 		text-align: center;
 		letter-spacing: 1px;
 		font-weight: bold;
@@ -693,21 +688,15 @@ body {
 	}
 
 	.flex-container-wrapper .diagnose-text {
-		// margin-left: 140px;
-		// height: 130px;
-		// line-height: 130px;
-		// color: #fff;
-		// font-size: 4em;
-		// margin-right: 20px;
-		// text-align: center;
-		// letter-spacing: 5px
-    	height: 130px;
-    	line-height: 130px;
-    	color: #fff;
-    	font-size: 3.5em;
-    	text-align: center;
-    	letter-spacing: 1px;
-    	font-weight: bold;
+		line-height: 30px;
+	    color: #fff;
+	    font-size: 2em;
+	    text-align: center;
+	    letter-spacing: 1px;
+	    font-weight: bold;
+	    width: 100%;
+	    word-break: break-all;
+	    padding-top: 40px;
 	}
 }
 
@@ -735,7 +724,8 @@ body {
 		margin: 18px auto auto;
 		background-color: #0185c5;
 		color: #fff;
-		font-size: 2.4em;
+		font-size: 1.8em;
+		/*font-size: 2.4em;*/
 		letter-spacing: 8px;
 		text-align: center
 	}
