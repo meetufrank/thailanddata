@@ -140,26 +140,26 @@
 
 
 });
-
-$.each($('.logvilad'),function(i){
-     $(this).click(function(){
-         $.ajax({
-			url:"{:url('@module/cases/Interfaces/valid_login')}",
-                      
-			dataType:'json',
-			type:'post',
-			success:function(re){
-				if(re.msg==0){
-                                    window.location.href='{:url(\'Login/index\')}';
-                                }
-			},
-                        error:function(){
-                            window.location.href='{:url(\'Login/index\')}';
-                        }
-		})
-     })
-     
- })
+//
+//$.each($('.logvilad'),function(i){
+//     $(this).click(function(){
+//         $.ajax({
+//			url:"{:url('@module/cases/Interfaces/valid_login')}",
+//                      
+//			dataType:'json',
+//			type:'post',
+//			success:function(re){
+//				if(re.msg==0){
+//                                    window.location.href='{:url(\'Login/index\')}';
+//                                }
+//			},
+//                        error:function(){
+//                            window.location.href='{:url(\'Login/index\')}';
+//                        }
+//		})
+//     })
+//     
+// })
 // 上传文件
 	$('#upload_file').on('change', function(){
 		
