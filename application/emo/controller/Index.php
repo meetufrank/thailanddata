@@ -71,7 +71,7 @@ class Index extends Controller
     protected function getCountryList(){
          
          $logic =CaseTypeLogic::getInstance();
-         $country_list=$logic->getSelectCountry("locate('Malaysia',ename) desc");
+         $country_list=$logic->getSelectCountry("locate('Thailand',ename) desc");
          $this->assign('country_list',$country_list);
      }
          //省市区联动

@@ -234,7 +234,7 @@ class CaseModel extends Model
     public function getNewCaseKey($countryid,$userid)
     {
        $request = Request::instance();
-       
+        $field=$request->param();
       //查询国家信息
         $countrymap=[
             'id'=>$countryid
@@ -293,6 +293,7 @@ class CaseModel extends Model
                         $user['email']=$value['email'];
                         $user['language']=$value['language'];
                         $user['case_code']=$casecount;
+                        $user['field']=$field;
                         if(isset($user['email'])||!empty($user['email'])){
                         //发送邮件  
                         $email=new SendUser();

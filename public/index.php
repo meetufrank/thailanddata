@@ -1,4 +1,5 @@
 <?php
+
 //判断当前链接
 //$url='http://'.$_SERVER['SERVER_NAME'].$_SERVER["REQUEST_URI"];
 //if($url=='http://'.$_SERVER['SERVER_NAME'].'/'){
@@ -18,3 +19,8 @@ define('RUNTIME_PATH', __DIR__ . '/../runtime/');
 
 // 框架引导文件
 require ROOT_PATH . 'thinkphp' . DIRECTORY_SEPARATOR . 'start.php';
+
+//if(!isset($_SERVER['HTTPS']) || $_SERVER['HTTPS'] == 'off'){
+//    Header("HTTP/1.1 301 Moved Permanently");
+//    header('Location: https://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);
+//}
