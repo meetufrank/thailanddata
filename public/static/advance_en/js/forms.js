@@ -389,7 +389,7 @@ $(function() {
                    
                 },
                 complete: function() {
-                    layer.close(layerload);
+                    
                     $(".medical-form").find("input[type=submit]").prop("disabled", !1),
                     $(".medical-form").find("input[type=submit]").val("submit")
                 }
