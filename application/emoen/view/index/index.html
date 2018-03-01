@@ -1,34 +1,26 @@
-<!doctype html>
-<html lang="en">
-<head>
-   <meta charset="UTF-8">
-</head>
-<body>
-<img src="6.jpg">
-<script>
-   var flag = true,//状态true为正常的状态,false为放大的状态
-           imgH,//图片的高度
-           imgW,//图片的宽度
-           img = document.getElementsByTagName('img')[0];//图片元素
-  img.onclick =  function(){
-      //图片点击事件
-       imgH = img.height; //获取图片的高度
-       imgW = img.width; //获取图片的宽度
-       if(flag){
-           //图片为正常状态,设置图片宽高为现在宽高的2倍
-           flag = false;//把状态设为放大状态
-           img.height = imgH*2;
-           img.width = imgW*2;
-       }else{
-           //图片为放大状态,设置图片宽高为现在宽高的二分之一
-           flag = true;//把状态设为正常状态
-           img.height = imgH/2;
-           img.width = imgW/2;
-       }
- 
-   }
- 
- 
-</script>
-</body>
-</html>
+  {extend name="common/base"}
+
+
+{block name="content"}
+<div class="feature-container clearfix">
+      <div class="feature-wrapper">
+        <div class="image-wrapper">
+          <img src="{$static_path}/advance_en/img/111.jpg" alt="">
+        </div>
+        <div class="feature-desc feature-desc-1">
+          <div class="feature-desc-inner-wrapper">
+          <h3><span>Expert Second Medical Opinion&nbsp;(ESMO)</span></h3>
+          <ul>
+            <li><a href="{:url('/Allianz/EMO/En/services/1')}#Gemomao"><span class="feature-text">What is a GEMO and when to use it?</span><span class="feature-icon"><i class="fa fa-angle-right"></i></span></a></li>
+<!--             <li><a href="{:url('/services/1')}#foreign"><span class="feature-text">When to use GEMO?<span class="feature-icon"><i class="fa fa-angle-right"></i></span></span></a></li> -->
+          </ul>
+          </div>
+        </div>
+      </div>
+
+
+        
+    </div>
+{/block}
+{/extend}
+
