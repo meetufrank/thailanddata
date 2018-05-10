@@ -51,18 +51,24 @@ class Login extends Controller
             }
            $where=[
                'user_name'=>$userName,
-               'u_status'=>1
+               'u_status'=>1,
+               'delete_time'=>0
            ];
-            $user = $chatuser->field('id,user_name,pwd,sign,avatar,is_manager')
+            $user = $chatuser->field('id,user_name,pwd,sign,avatar,is_manager,company')
                 ->where($where)->find();
+
             if(empty($user)){
                 return json(['code' => -1, 'data' => '', 'msg' => 'user does not exist']);
             }
-
+           
+           
             if( md5($pwd) != $user['pwd'] ){
                 return json(['code' => -2, 'data' => '', 'msg' => 'Password error']);
             }
-
+           //查询该用户是否有登录该pp的权限
+             if($user['company']!=6){
+                 return json(['code' => -2, 'data' => '', 'msg' => 'You do not have permission to log in to this site！']);
+             }
             //设置用户登录
             $chatuser->where('id', $user['id'])->setField('status', 1);
 
@@ -79,7 +85,7 @@ class Login extends Controller
                 }
                 
             }else{
-                $url=url('/Allianz/EMO/Thai');
+                $url=url('/Allianz');
             }
             return json(['code' => 1, 'data' => $url, 'msg' => 'Log in successful']);
         }

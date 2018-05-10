@@ -185,16 +185,23 @@ class CaseModel extends Model
      */
     protected function setCaseCodeAttr()
     {
-   
-          $request=\think\Request::instance();
-       
+        
+              $request=\think\Request::instance();
+//          if($request->userid){
+//              $userid=$request->userid;
+//          }
+//        
+        
         $field=$request->param();
         if(isset($field['country'])&&(isset($field['userid']))){
+           
             //后台递交
            $countryid=$field['country'];
            $userid=$field['userid']; 
            return $this->getNewCaseKey($countryid,$userid);
+           exit;
         }elseif(isset($field['body'])){
+            
             //接口调用
             $body=$field['body'];
             //urldecode解密
@@ -212,6 +219,7 @@ class CaseModel extends Model
            $userid= ChatUserLogic::getInstance()->getUserId($map);  //该用户id
              $countryid=$userdata['country'];
            return $this->getNewCaseKey($countryid,$userid);
+           exit;
          }else{
              exit;
          }
@@ -220,13 +228,19 @@ class CaseModel extends Model
            
             //前端页面提交
            $countryid=$field['country'];
+           
            $userid=$request->userid; 
            return $this->getNewCaseKey($countryid,$userid);
+           exit;
         }
       
+        
+    
+        
+        
     }
 
-     /**
+    /**
      * 获取一个新的CaseID
      *
      * @return string
@@ -234,7 +248,8 @@ class CaseModel extends Model
     public function getNewCaseKey($countryid,$userid)
     {
        $request = Request::instance();
-        $field=$request->param();
+       $field=$request->param();
+       
       //查询国家信息
         $countrymap=[
             'id'=>$countryid
@@ -275,7 +290,7 @@ class CaseModel extends Model
             $casecount=CaseLogic::getInstance()->getCaseCount($casemap,1);
             if(!$casecount){
                 //如果成功获取case编号，先给用户发送邮件
-//                $user= ChatUserLogic::getInstance()->getUserlist($usermap,1);
+//               $userinfo= ChatUserLogic::getInstance()->getUserlist($usermap,1);
 //                if(isset($user['email'])||!empty($user['email'])){
 //                        //发送邮件  
 //                        $email=new SendUser();
@@ -284,17 +299,28 @@ class CaseModel extends Model
                   
                  //给公司绑定的每个邮箱发送邮件
                  //查询公司绑定的邮箱列表
-                 $companylist=db('cases_company_email')->where(['c_id'=>$companyid])->select();
-                 if(!isset($field['username'])){
-                     $field['username']=$field['firstname'].' '.$field['lastname'];
-                 }
-                 if(!empty($companylist)){
-                     
+               
+                 $companylist=db('cases_company_email')->where(['c_id'=>$companyid,'type'=>0])->select();   //0表示添加 case业务
+                
+                 if(!empty($companylist)){ 
                      foreach ($companylist as $key => $value) {
                         $user=[];
                         $user['email']=$value['email'];
-                        $user['language']=$value['language'];
+                        
                         $user['case_code']=$casecount;
+                         //根据公司获取case邮件内容
+                        $value['casecontent'] || $value['casecontent']=1;
+                        $emailcontent=db('cases_email_content')->where(['id'=>$value['casecontent']])->find();
+                        $field['content']= $emailcontent['content'];
+                        //用户所在公司
+                        $field['company']=$company['name'];
+                        $field=$this->updatefield($field);
+                        if($company['type']==1){
+                            $userinfo= ChatUserLogic::getInstance()->getUserlist(['id'=>$userid],1);
+                            $user['policy']=$userinfo['policy'];
+                        }else{
+                            $user['policy']='';
+                        }
                         $user['field']=$field;
                         if(isset($user['email'])||!empty($user['email'])){
                         //发送邮件  
@@ -303,6 +329,7 @@ class CaseModel extends Model
                          }
                      }
                  }
+                
                 return $caseid;
                 break;
             }
@@ -312,7 +339,60 @@ class CaseModel extends Model
           return false;
        } 
        
+    }   
+  
+    
+    //整理字段
+    public function updatefield($field) {
+        //查询case类型
+            $casetype=db('cases_case_type')->where(['id'=>$field['case_type']])->find();
+            $field['typename']=$casetype['typename'];
+            $field['typeename']=$casetype['typeename'];
+          
+        //处理性别
+             if($field['sex']==1){
+                 $field['sexname']='男';
+                 $field['sexename']='Male';
+             }else{
+                 $field['sexname']='女';
+                 $field['sexename']='Female';
+             }
+        //是否本人
+             if($field['isme']==1){
+                 $field['ismename']='是';
+                 $field['ismeename']='Yes';
+             }else{
+                 $field['sexname']='否';
+                 $field['sexename']='No';
+             }
+        //与患者关系
+             if($field['isme']==1){
+                 $field['relationship']='';
+               
+             }
+        //国家
+         $country= db('cases_country')->where(['id'=>$field['country']])->find();
+         $field['countryname']=$country['name'];
+         $field['countryename']=$country['ename'];
+       
+         if($field['country']==1){
+             //省
+             $province= db('cases_area')->where(['id'=>$field['province']])->find();
+             $field['provincename']=$province['area_name'];
+             //市
+             $city= db('cases_area')->where(['id'=>$field['city']])->find();
+             $field['cityname']=$city['area_name'];
+             //区
+             $district= db('cases_area')->where(['id'=>$field['district']])->find();
+             $field['districtname']=$district['area_name'];
+             
+         }
+         
+        return $field;
+         
     }
+    
+
 
 //    
 //        /**
