@@ -19,21 +19,23 @@
       </a>
         {if condition="$userid neq 0"}
           <a class="login-wrapper visible-xs col-xs-6" href="{:url('Allianz/EMO/En')}">English</a>
-          <a class="login-wrapper visible-xs col-xs-6" href="{:url('Login/logout')}">ออกจากระบบ</a>
+<!--          <a class="login-wrapper visible-xs col-xs-6" href="{:url('Login/logout')}">ออกจากระบบ</a>-->
           <div style="clear:both;" class="visible-xs"></div>
        {else/}
           <a class="login-wrapper visible-xs col-xs-6" href="{:url('Allianz/EMO/En')}">English</a>
-           <a class="login-wrapper visible-xs col-xs-6" href="{:url('Login/index')}">เข้าสู่ระบบ</a> 
+<!--           <a class="login-wrapper visible-xs col-xs-6" href="{:url('Login/index')}">เข้าสู่ระบบ</a> -->
           <div style="clear:both;" class="visible-xs"></div>
        {/if}
       <ul class="menu-wrapper clearfix">
         {if condition="$userid neq 0"}
         <li class="menubar-login hidden-xs">
-          <a href="{:url('Allianz/EMO/En')}">English</a>丨<a href="{:url('Login/logout')}">{$minedata.user_name}丨ออกจากระบบ</a>
+            <a href="{:url('Allianz/EMO/En')}">English</a>
+<!--          <a href="{:url('Allianz/EMO/En')}">English</a>丨<a href="{:url('Login/logout')}">{$minedata.user_name}丨ออกจากระบบ</a>-->
         </li>
         {else/}
         <li class="menubar-login hidden-xs">
-          <a href="{:url('Allianz/EMO/En')}">English</a> 丨<a href="{:url('Login/index')}" class="mlogin"><i class="fa fa-unlock-alt" aria-hidden="true"></i>&nbsp;เข้าสู่ระบบ</a> 
+            <a href="{:url('Allianz/EMO/En')}">English</a>
+<!--          <a href="{:url('Allianz/EMO/En')}">English</a> 丨<a href="{:url('Login/index')}" class="mlogin"><i class="fa fa-unlock-alt" aria-hidden="true"></i>&nbsp;เข้าสู่ระบบ</a> -->
         </li>
         {/if}
          {volist name="service_list" id="sl"}

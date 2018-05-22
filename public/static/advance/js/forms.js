@@ -26,6 +26,7 @@ function resizeForm() {
     })) : ($(".app-mask").removeClass().addClass("app-mask").hide(), $(".form-inner-wrapper").removeClass().addClass("form-inner-wrapper"))
 }
 function animateShowForm() {
+    return;
     formInitial(),
     $(".app-mask").show(),
     $(".form-outter-wrapper").css({
@@ -42,6 +43,7 @@ function animateShowForm() {
 $(function() {
     $("body").on("click", "div.diagnose", animateShowForm),
     $(".mobile-diagnose").click(function() {
+        return;
         $(".mobile-form-outter-wrapper").show()
     }),
     $(window).resize(function() {
