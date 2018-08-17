@@ -26,7 +26,7 @@ function resizeForm() {
     })) : ($(".app-mask").removeClass().addClass("app-mask").hide(), $(".form-inner-wrapper").removeClass().addClass("form-inner-wrapper"))
 }
 function animateShowForm() {
-    return;
+   // return;
     formInitial(),
     $(".app-mask").show(),
     $(".form-outter-wrapper").css({
